@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  # BigTable Emulator
+  # https://cloud.google.com/bigtable/docs/emulator
+  bigtable:
+#    image: google/cloud-sdk:latest
+    image: gcr.io/google.com/cloudsdktool/cloud-sdk:emulators
+    command: gcloud beta emulators bigtable start
+    ports:
+      - 8086:8086
